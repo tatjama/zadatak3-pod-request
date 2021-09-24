@@ -9,11 +9,47 @@
   <title>Frontend Mentor | Pod request access landing page</title>
 </head>
 <body>
-  Publish your podcasts everywhere.
-
-  Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
+  <div class="container">
+    <header class="logo" >
+      <img src="./assets/desktop/logo.svg" alt="logo pod"/>
+    </header>
+    <main>
+      <h1 class="title">
+        Publish your podcasts everywhere.
+      </h1>
+      <p class="content">
+        Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
   Apple Podcasts, Google Podcasts, Pocket Casts and more!
+      </p>
+      <form action="#" preventSubmit="true">        
+        <fieldset>
+          <input type="email" placeholder="Email address" name="email"/>
+          <input type="submit" value="Request Access"/>
+        </fieldset>
+        <p>Oops! Please check your email</p>
+      </form>
+    </main>
+    <footer>
+      <section class="social-media">
+        <ul>
+          <li><a href="#" target="_blank">
+            <img src ="assets/desktop/spotify.svg" alt = "google podcast"/>
+          </a></li>
+          <li><a href="#" target="_blank">
+            <img src ="assets/desktop/apple-podcast.svg" alt = "google podcast"/>
+          </a></li>
+          <li><a href="#" target="_blank">
+            <img src ="assets/desktop/google-podcasts.svg" alt = "google podcast"/>
+          </a></li>
+          <li><a href="#" target="_blank">
+            <img src ="assets/desktop/pocket-casts.svg" alt = "google podcast"/>
+          </a></li>
+        </ul>
+      </section>
+    </footer>
+  </div>
+  
 
-  Request access
+  
 </body>
 </html>
