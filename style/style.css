@@ -1,0 +1,62 @@
+:root{
+    --primary-green: #54E6AF;
+    --extra-dark-gray: #121725;
+    --dark-grey: #2C344B;
+    --medium-grey: #5A668A;
+    --light-grey: #C2CBE5;
+    --primary-white: #ffffff;
+    --text-error: #FB3E3E;
+}
+@font-face {
+    font-family: Chivo,  sans-serif;
+    src: url(../fonts/Chivo/Chivo-Light.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html, .container{
+    font-family: Chivo, sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+h1{
+    font-size: 52px;
+    line-height: 62px;
+    font-weight: 400;
+}
+input{
+    font-size: 14px;
+    line-height: 28px;
+    border: 0;
+    border-radius:28px;
+    -webkit-border-radius:28px;
+    -moz-border-radius:28px;
+    -ms-border-radius:28px;
+    -o-border-radius:28px;
+}
+input[type="email"]{
+    background-color: #2C344B;
+    color: #fff;
+    padding: 14px 32px;
+    width: 350px;
+}
+
+input[type="submit"]{
+    color: #121725;
+    background-color: #54E6AF;
+    padding:9px 27px;
+    width: 162px;
+}
+input[type="submit"]:hover{
+    background-color: #B3FFE2;
+}
+.error-message{
+    padding: 8px 32px;
+    font-size: 12px;
+    line-height: 14.28px;
+    color: #FB3E3E;
+}

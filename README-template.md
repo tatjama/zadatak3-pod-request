@@ -44,8 +44,9 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub](https://github.com/tatjama/zadatak3-pod-request)
+- Preview: [Vercel](https://zadatak3-pod-request-fxcgikwyr-tatjana.vercel.app/)
+- Live Site URL: [Vercel](https://zadatak3-pod-request.vercel.app/)
 
 ## My process
 
