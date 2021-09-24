@@ -1,15 +1,13 @@
 :root{
     --primary-green: #54E6AF;
-    --extra-dark-gray: #121725;
-    --dark-grey: #2C344B;
-    --medium-grey: #5A668A;
-    --light-grey: #C2CBE5;
+    --hover-green: #B3FFE2;
+    --primary-gray: #121725;
+    --dark-gray: #2C344B;
+    --medium-gray: #5A668A;
+    --text-gray: #C2CBE5;
     --primary-white: #ffffff;
     --text-error: #FB3E3E;
-}
-@font-face {
-    font-family: Chivo,  sans-serif;
-    src: url(../fonts/Chivo/Chivo-Light.ttf);
+    
 }
 *{
     margin: 0;
@@ -17,19 +15,65 @@
     box-sizing: border-box;
 }
 body, html, .container{
-    font-family: Chivo, sans-serif;
+    font-family: 'Chivo', sans-serif;
     font-size: 18px;
     line-height: 28px;
-    font-weight: 400;
+    font-weight: 300;
+    color: var(--text-gray);
     overflow-x: hidden;
 }
+.container{
+    background-color: var(--primary-gray);
+    width: 100%;
+    height: 100vh;
+    padding: 102px 0 0 165px;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/desktop/image-host.jpg);
+    background-repeat: no-repeat;
+    background-position:387px 0px;
+    margin-top: -35px;
+}
+/*Start Content Container*/
+.content-container{
+    position: relative;
+     top: 131px;
+     width: 723px;
+     height: 509px;
+     background-color:var(--primary-gray);
+    }
+/*Start Text Container*/   
+.text-container{
+    padding-top: 88px;
+    padding-right: 68px;
+    width: 100%;
+} 
 h1{
     font-size: 52px;
     line-height: 62px;
-    font-weight: 400;
+    font-weight: lighter;
+    text-transform: uppercase;
+    color: var(--primary-green);
+}
+h1 span{
+    color: var(--primary-white);
+}
+.text{
+    width: 445px;
+    margin: 24px 0;
+ }
+form{
+    margin: 16px 0;
+}
+fieldset{
+    border: 0px;
 }
 input{
     font-size: 14px;
+    font-weight: bold;
     line-height: 28px;
     border: 0;
     border-radius:28px;
@@ -39,24 +83,58 @@ input{
     -o-border-radius:28px;
 }
 input[type="email"]{
-    background-color: #2C344B;
-    color: #fff;
+    background-color: var(--dark-gray);
+    color: var(--primary-white);
     padding: 14px 32px;
     width: 350px;
 }
-
 input[type="submit"]{
-    color: #121725;
-    background-color: #54E6AF;
+    color: var(--primary-gray);
+    background-color: var(--primary-green);
     padding:9px 27px;
     width: 162px;
+    position: relative;
+    right:85px;
 }
 input[type="submit"]:hover{
-    background-color: #B3FFE2;
+    background-color: var(--hover-green);    
 }
 .error-message{
     padding: 8px 32px;
     font-size: 12px;
+    font-weight: bold;
     line-height: 14.28px;
-    color: #FB3E3E;
+    color: var(--text-error);
+    visibility: hidden;
 }
+/*End Text Container*/
+/*Start Footer*/
+footer{
+    margin-top: 48px;
+}
+ul{
+    list-style: none;
+    display:flex;
+    flex-direction: row;
+    width: 536px;
+}
+.first-group{
+    width: 387px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.second-group{
+    margin-left: 27px;
+}
+li{
+    width: 130px;
+    height: 29px;
+}
+/*End Footer*/
+.dots{
+    position: absolute;
+    right: 0;
+    bottom: 78px;
+}
+/*End Content Container*/
