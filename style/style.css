@@ -2,12 +2,12 @@
     --primary-green: #54E6AF;
     --hover-green: #B3FFE2;
     --primary-gray: #121725;
+    --primary-gray-transparent: #121726e6;
     --dark-gray: #2C344B;
     --medium-gray: #5A668A;
     --text-gray: #C2CBE5;
     --primary-white: #ffffff;
-    --text-error: #FB3E3E;
-    
+    --text-error: #FB3E3E;    
 }
 *{
     margin: 0;
@@ -20,7 +20,7 @@ body, html, .container{
     line-height: 28px;
     font-weight: 300;
     color: var(--text-gray);
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .container{
     background-color: var(--primary-gray);
@@ -29,18 +29,17 @@ body, html, .container{
     position: relative;
 }
 .wrapper{
-    width: 1275px;
+    width: 88.5%;
     height: 100%;
     position: absolute;
     right: 0;
 }
-
 main{
-    width: 1275px;
+    width: 100%;
     height: 640px;
-    background-image: url(../assets/desktop/image-host.jpg);
-    background-repeat: no-repeat;
-    background-position:387px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
     position: absolute;
     top: 50%;
     right: 50%;
@@ -50,16 +49,28 @@ main{
     -ms-transform: translate(50%, -50%);
     -o-transform: translate(50%, -50%);
 }
+.background-container{
+    width:888px;
+    height: 640px;
+    background-image: url(../assets/desktop/image-host.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 .logo{
     position: relative;
+    width:387px;
     bottom: 28px;
+    z-index: 5;
 }
 /*Start Content Container*/
 .content-container{
-    margin-top: 70px;
      width: 723px;
      height: 509px;
      background-color:var(--primary-gray);
+     position: absolute;
+     bottom: 0;
+     z-index: 10;
     }
 /*Start Text Container*/   
 .text-container{
@@ -91,12 +102,15 @@ input{
     font-size: 14px;
     font-weight: bold;
     line-height: 28px;
-    border: 0;
+    border: 0 ;
     border-radius:28px;
     -webkit-border-radius:28px;
     -moz-border-radius:28px;
     -ms-border-radius:28px;
     -o-border-radius:28px;
+}
+input:focus{
+    outline: none;
 }
 input[type="email"]{
     background-color: var(--dark-gray);
@@ -111,9 +125,13 @@ input[type="submit"]{
     width: 162px;
     position: relative;
     right:85px;
+    cursor: pointer;
 }
 input[type="submit"]:hover{
     background-color: var(--hover-green);    
+}
+input::placeholder{
+    color: var(--medium-gray);
 }
 .error-message{
     padding: 8px 32px;
@@ -122,6 +140,7 @@ input[type="submit"]:hover{
     line-height: 14.28px;
     color: var(--text-error);
     visibility: hidden;
+    /*visibility: visible;*/
 }
 /*End Text Container*/
 /*Start Footer*/
@@ -149,8 +168,48 @@ li{
 }
 /*End Footer*/
 .dots{
-    position: relative;
-    left: 1043px;
-    top: 78px;
+    position: absolute;
+    right: 0;
+    bottom: -52px;
+    z-index: 15;
 }
 /*End Content Container*/
+@media screen and (max-width: 768px) {
+    .wrapper{
+        width: 95%;
+        left: 39px;
+    }
+    .content-container{
+        width: 635px;
+    }
+    .text-container{
+        padding-top: 93px;
+        padding-right: 0;
+    }
+    main{
+        height: 767px;
+        top: 0px;
+        left: 0px;
+        transform: translate(0%, 0%);
+        -webkit-transform: translate(0%, 0%);
+        -moz-transform: translate(0%, 0%);
+        -ms-transform: translate(0%, 0%);
+        -o-transform: translate(0%, 0%);
+}
+    .logo{
+        bottom: -50px;
+    }
+    .background-container{
+        width:491px;
+        height: 767px;
+        background-image: url(../assets/tablet/image-host.jpg);
+    }
+    h1{
+        font-size: 48px;
+        line-height:56px;
+    }
+    .dots{
+        left: -18px;
+        bottom: -257px;
+    }   
+}
